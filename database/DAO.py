@@ -4,7 +4,9 @@ class DAO():
     @staticmethod
     def getAllYears():
         conn = DBConnect.get_connection()
-
+        if conn is None:
+            print(f"errore di connessione")
+            return
         results = []
 
         cursor = conn.cursor(dictionary=True)

@@ -20,7 +20,7 @@ class View(ft.UserControl):
 
     def load_interface(self):
         # title
-        self._title = ft.Text("Esame del 12/01/2026", color="blue", size=24)
+        self._title = ft.Text("Formula 1 Web", color="blue", size=24)
         self._page.controls.append(self._title)
 
         self._ddAnno1 = ft.Dropdown(label="Da", hint_text="Anno")

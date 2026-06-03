@@ -8,7 +8,11 @@ class Controller:
         # the model, which implements the logic of the program and holds the data
         self._model = model
 
-
+    def handleAnni(self):
+        for anno in self._model.anni:
+            self._view._ddAnno1.options.append(ft.dropdown.Option(key=str(anno), text=str(anno)))
+            self._view._ddAnno2.options.append(ft.dropdown.Option(key=str(anno), text=str(anno)))
+        self._view.update_page()
     def handleCreaGrafo(self,e):
         pass
 
