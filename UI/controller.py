@@ -9,7 +9,7 @@ class Controller:
         self._model = model
 
     def handleAnni(self):
-        for anno in self._model.anni:
+        for anno in self._model._anni:
             self._view._ddAnno1.options.append(ft.dropdown.Option(key=str(anno), text=str(anno)))
             self._view._ddAnno2.options.append(ft.dropdown.Option(key=str(anno), text=str(anno)))
         self._view.update_page()
